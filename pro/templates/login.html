@@ -1,0 +1,28 @@
+
+
+
+{% extends "_base.html" %}
+{% block content %}
+
+<h1>Welcome to Task App</h1>
+<h2>Login to access your tasks</h2>
+
+<form action="/" method="post">
+<div class="input-group">
+<label for="name">Username:</label>
+<input type="text" id="username" name="username" value="{{request.form.username}}">
+</div>
+<br />
+<br />
+<div class="input-group">
+<label for="mail">Password</label>
+<input type="password" name="password" id="password" value="{{request.form.password}}">
+</div>
+
+<div>
+<button type="submit">Login</button>
+</div>
+
+{% endblock %}
+
+
